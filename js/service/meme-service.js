@@ -4,16 +4,32 @@ var gMemes = [
         url: `/images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
-        text: ''
-    }, 
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
 ];
 
-
-function getMeme(id){
-    return gMemes.find(img => img.id === id); 
+function getMemes() {
+    return gMemes.slice();
 }
 
-function setMemeText(userText, id){
-    const img = getMeme(id); 
-    img.text = userText;
+function getMemeById(id) {
+    return gMemes.find(img => img.id === id);
+}
+
+function setMemeText(userText, id, isTopLine) {
+    const img = getMemeById(id);
+    if (isTopLine) img.txt.topLineTxt = userText;
+    else img.txt.bottomLineTxt= userText;
 }

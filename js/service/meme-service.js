@@ -18,6 +18,150 @@ var gMemes = [
             bottomLineTxt: ''
         }
     },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
+    {
+        url: `/images/${gId}.jpg`,
+        id: gId++,
+        keywords: ['funny, politics'],
+        txt: {
+            topLineTxt: '',
+            bottomLineTxt: ''
+        }
+    },
 ];
 
 function getMemes() {
@@ -25,11 +169,16 @@ function getMemes() {
 }
 
 function getMemeById(id) {
-    return gMemes.find(img => img.id === id);
+    return gMemes.find(meme => meme.id === id);
 }
 
-function setMemeText(userText, id, isTopLine) {
-    const img = getMemeById(id);
-    if (isTopLine) img.txt.topLineTxt = userText;
-    else img.txt.bottomLineTxt= userText;
+function setMemeText(userText, currMeme, isTopLine) {
+    if (isTopLine) currMeme.txt.topLineTxt = userText;
+    else currMeme.txt.bottomLineTxt= userText;
+}
+
+function removeLine(line, memeObj){
+    const meme = gMemes.find(meme => memeObj.id === meme.id);
+    if(line === 'top') meme.txt.topLineTxt = ''; 
+    else meme.txt.bottomLineTxt = '';
 }

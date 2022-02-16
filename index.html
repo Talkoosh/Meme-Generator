@@ -13,10 +13,9 @@
     <nav class="gallery-nav">
         <h3 class="logo">Meme Generator</h3>
         <div class="nav-buttons">
-            <button class="gallery-btn">Gallery</button>
+            <button onclick="onGalleryInit()" class="gallery-btn">Gallery</button>
             <button class="about-btn">About</button>
         </div>
-
     </nav>
 
     <main class="meme-gallery">
@@ -30,39 +29,39 @@
         </section>
     </main>
 
-    <main class="meme-creator">
-        <div class="canvas-container">
-            <canvas width="600" height="600" id="meme-canvas" class="meme-canvas"></canvas>
-        </div>
-        <section class="meme-options">
-            <input placeholder="Meme text goes here" oninput="onSetMemeText(this)" type="text" class="meme-text">
-            <div class="meme-control-btns">
-                <button onclick="onSwitchLine()" class="switch-line-btn">&uarr;&darr;</button>
-                <button class="add-line-btn">+</button>
-                <button class="delete-line-btn">-</button>
+    <main class="meme-creator-container">
+        <section class="meme-creator">
+            <div class="canvas-container">
+                <canvas width="600" height="600" id="meme-canvas" class="meme-canvas"></canvas>
             </div>
-            <div class="text-control-btns">
-                <input oninput="onSetTextColor(this)" type="color" class="color-input">
-                <button onclick="onSetFontSize('inc')" class="increase-font-btn">A+</button>
-                <button onclick="onSetFontSize('dec')" class="decrease-font-btn">A-</button>
-                <button class="">R</button>
-                <button class="">L</button>
-                <button class="">C</button>
-                <button class="">S</button>
-                <select></select>
-            </div>
-            <div class="stickers"></div>
-            <div class="canvas-options-btns">
-                <button class="share">Share</button>
-                <button class="download">Download</button>
-            </div>
+            <section class="meme-options">
+                <input placeholder="Meme text goes here" oninput="onSetMemeText(this)" type="text" class="meme-text">
+                <div class="meme-control-btns">
+                    <button onclick="onSwitchLine()" class="switch-line-btn">&uarr;&darr;</button>
+                    <button onclick="onAddLine()" class="add-line-btn">+</button>
+                    <button onclick="onRemoveLine()" class="delete-line-btn">-</button>
+                </div>
+                <div class="text-control-btns">
+                    <input oninput="onSetTextColor(this)" type="color" class="color-input">
+                    <button onclick="onSetFontSize('inc')" class="increase-font-btn">A+</button>
+                    <button onclick="onSetFontSize('dec')" class="decrease-font-btn">A-</button>
+                    <button onclick="onSetTextAlignment('right')" class="right-align-text-btn">R</button>
+                    <button onclick="onSetTextAlignment('left')" class="left-align-text-btn">L</button>
+                    <button onclick="onSetTextAlignment('center')" class="center-align-text-btn">C</button>
+                    <button class="">S</button>
+                    <select></select>
+                </div>
+                <div class="stickers"></div>
+                <div class="canvas-options-btns">
+                    <button class="share">Share</button>
+                    <button class="download">Download</button>
+                </div>
+            </section>
         </section>
-
     </main>
-
-    <script src="js/gallery-controller.js"></script>
     <script src="js/service/meme-service.js"></script>
-    <script src="js/meme-controller.js"></script>
+    <script src="js/gallery-controller.js"></script>
+    <script src="js/meme-creator-controller.js"></script>
 </body>
 
 </html>

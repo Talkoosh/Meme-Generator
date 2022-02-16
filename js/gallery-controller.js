@@ -1,4 +1,7 @@
 function onGalleryInit() {
+    document.querySelector('.meme-gallery').style.display = 'block';
+    document.querySelector('.meme-creator-container').style.display = 'none';
+
     renderGallery();
 }
 

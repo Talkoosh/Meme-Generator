@@ -9,28 +9,30 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body onload="init()">
     <nav class="gallery-nav">
         <h3 class="logo">Logo</h3>
         <button class="gallery-btn">Gallery</button>
-        <button class="about-btn">about</button>
+        <button class="about-btn">About</button>
     </nav>
 
-    <main class="meme-gallery">  
+    <main class="meme-gallery">
         <section class="gallery">
             <div class="filter-memes">
                 <input type="text" class="meme-search">
-                <div class="filter-words">asd</div>
-                <button class="more-button">asdas</button>
+                <div class="filter-words"></div>
+                <button class="more-button">More</button>
             </div>
             <div class="meme-pics"></div>
         </section>
     </main>
 
     <main class="meme-creator">
-        <div class="canvas-container"><canvas class="meme-canvas"></canvas></div>
+        <div class="canvas-container">
+            <canvas width="600" height="600" id="meme-canvas" class="meme-canvas"></canvas>
+        </div>
         <section class="meme-options">
-            <input class="meme-text">
+            <input oninput="onSetMemeText(this)" type="text" class="meme-text">
             <div class="meme-control-btns">
                 <button class="switch-lines"></button>
                 <button class="add-line"></button>
@@ -55,6 +57,7 @@
 
     </main>
 
+    <script src="js/service/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>
 </body>
 

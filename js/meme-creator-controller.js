@@ -7,6 +7,7 @@ var gMemeOptions = {
     font: 'impact',
     fontSize: 50,
     isTopLine: true,
+    alignment: 'left'
 };
 var gTextPos = {
     topTxtPos: {
@@ -54,6 +55,8 @@ function drawText(txt) {
     setTextPos('top', txt.topLineTxt);
     gCtx.fillText(txt.bottomLineTxt, gTextPos.bottomTxtPos.xStart, gTextPos.bottomTxtPos.yStart);
     setTextPos('bottom', txt.bottomLineTxt);
+
+    alignText();
 }
 
 function setTextPos(area, txt) { 
@@ -105,13 +108,18 @@ function onRemoveLine() {
 }
 
 function onSetTextAlignment(alignTo) {
+    gMemeOptions.alignment = alignTo;
+    alignText();
+}
+
+function alignText(){
     const topTxtWidth = gCtx.measureText(gCurrMeme.txt.topLineTxt).width;
     const bottomTxtWidth = gCtx.measureText(gCurrMeme.txt.bottomLineTxt).width;
 
-    if (alignTo === 'left') {
+    if (gMemeOptions.alignment === 'left') {
         gTextPos.topTxtPos.xStart = 10;
         gTextPos.bottomTxtPos.xStart = 10;
-    } else if (alignTo === 'right') {
+    } else if (gMemeOptions.alignment === 'right') {
         gTextPos.topTxtPos.xStart = gElCanvas.width - topTxtWidth - 10;
         gTextPos.bottomTxtPos.xStart = gElCanvas.width - bottomTxtWidth - 10;
     } else {

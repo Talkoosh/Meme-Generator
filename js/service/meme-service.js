@@ -1,7 +1,7 @@
 var gId = 1;
 var gMemes = [
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -10,7 +10,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -19,7 +19,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -28,7 +28,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -37,7 +37,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -46,7 +46,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -55,7 +55,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -64,7 +64,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -73,7 +73,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -82,7 +82,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -91,7 +91,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -100,7 +100,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -109,7 +109,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -118,7 +118,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -127,7 +127,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -136,7 +136,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -145,7 +145,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {
@@ -154,7 +154,7 @@ var gMemes = [
         }
     },
     {
-        url: `/images/${gId}.jpg`,
+        url: `./images/${gId}.jpg`,
         id: gId++,
         keywords: ['funny, politics'],
         txt: {

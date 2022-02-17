@@ -1,0 +1,93 @@
+.meme-creator {
+    width: 80%;
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--clr1);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+section.meme-options{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.meme-text{
+    width: 70%;
+    height: 50px;
+    padding:20px;
+    background-color: var(--clr2);
+    color:white;
+    font-family: poppins;
+    font-size: 1.25rem;
+    border-radius: 100rem;
+    border: 1px solid white;
+    box-shadow: -1px 7px 7px black
+}
+
+div.meme-control-btns{
+    background-color: lightslategray;
+    width: 50%;
+    height: 100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.meme-control-btns button{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+div.meme-control-btns button:hover{
+    cursor: pointer;
+}
+
+.switch-line-btn{
+    background-color: aqua;
+}
+
+.add-line-btn{
+    background-color: lightgreen;
+}
+
+.delete-line-btn{
+    background-color: red;
+}
+
+.text-control-btns{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    gap: 10px;
+}
+
+.text-control-btns button{
+    flex-basis: 33%;
+    height: 2.5rem;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.canvas-options-btns button{
+    width: 200px;
+    height: 50px;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    cursor: pointer;
+}

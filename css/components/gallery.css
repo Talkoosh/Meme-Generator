@@ -1,0 +1,62 @@
+main.meme-gallery{
+    height: 100%;
+}
+
+.gallery{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--clr1);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.filter-memes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+input.meme-search{
+    font-family: poppins;
+    font-size: 1.25rem;
+    color: white;
+    padding-left: 1.5625rem;
+    background-color: var(--clr2);
+    width: 500px;
+    height: 50px;
+    border-radius: 100rem;
+}
+
+button.more-btn{
+    width: 8rem;
+    height: 50px;
+    border-radius: 100rem;
+    background-color: transparent;
+    font-family: poppins;
+    font-size: 1.25rem;
+    color: white;
+    border: 1px solid white;
+    transition: box-shadow 0.3s, backgrond-color 0.3s, color 0.3s;
+
+}
+
+button.more-btn:hover{
+    cursor: pointer;
+    color: lightseagreen;
+    background-color: white;
+    box-shadow: black 0px 4px 3px 3px;
+}
+
+.meme-pics{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}

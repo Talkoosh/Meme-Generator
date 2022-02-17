@@ -49,16 +49,23 @@
                     <button onclick="onSetTextAlignment('left')" class="left-align-text-btn">L</button>
                     <button onclick="onSetTextAlignment('center')" class="center-align-text-btn">C</button>
                     <button class="">S</button>
-                    <select></select>
+                    <select onchange="onFontFamilyChange(this)" class="font-family-select">
+                        <option value="impact">Impact</option>
+                        <option value="sans">Sans</option>
+                        <option value="poppins">Poppins</option>
+                    </select>
                 </div>
                 <div class="stickers"></div>
                 <div class="canvas-options-btns">
-                    <button class="share">Share</button>
-                    <button class="download">Download</button>
+                    <a class="share-link"  onclick="onShareMeme()">Share</a>
+                    <p class="user-msg"></p>
+                    <div class="share-container"></div>
+                    <a class="download-link" href="" onclick="onDownloadMeme(this)">Download</a>
                 </div>
             </section>
         </section>
     </main>
+    <script src="js/service/upload-download-service.js"></script>
     <script src="js/service/meme-service.js"></script>
     <script src="js/gallery-controller.js"></script>
     <script src="js/meme-creator-controller.js"></script>

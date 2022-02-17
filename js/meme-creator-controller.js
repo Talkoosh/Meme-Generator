@@ -3,7 +3,7 @@ var gCtx;
 var gCurrMeme;
 var gIsDrag = false;
 var gMemeOptions = {
-    color: '#00000',
+    color: '#FFFF',
     font: 'impact',
     fontSize: 50,
     isTopLine: true,
@@ -54,10 +54,9 @@ function drawText(txt) {
     setTextPos('top', txt.topLineTxt);
     gCtx.fillText(txt.bottomLineTxt, gTextPos.bottomTxtPos.xStart, gTextPos.bottomTxtPos.yStart);
     setTextPos('bottom', txt.bottomLineTxt);
-
 }
 
-function setTextPos(area, txt) {
+function setTextPos(area, txt) { 
     const measure = gCtx.measureText(txt);
     const txtWidth = measure.width;
     let fontHeight = measure.fontBoundingBoxAscent + measure.fontBoundingBoxDescent;
@@ -106,17 +105,36 @@ function onRemoveLine() {
 }
 
 function onSetTextAlignment(alignTo) {
-    if (alignTo === 'right') {
+    const topTxtWidth = gCtx.measureText(gCurrMeme.txt.topLineTxt).width;
+    const bottomTxtWidth = gCtx.measureText(gCurrMeme.txt.bottomLineTxt).width;
+
+    if (alignTo === 'left') {
         gTextPos.topTxtPos.xStart = 10;
         gTextPos.bottomTxtPos.xStart = 10;
-    } else if (alignTo === 'left') {
-        gTextPos.topTxtPos.xStart = gElCanvas.width - 10;
-        gTextPos.bottomTxtPos.xStart = gElCanvas.width - 10;
+    } else if (alignTo === 'right') {
+        gTextPos.topTxtPos.xStart = gElCanvas.width - topTxtWidth - 10;
+        gTextPos.bottomTxtPos.xStart = gElCanvas.width - bottomTxtWidth - 10;
     } else {
-        gTextPos.topTxtPos.xStart = gElCanvas.width / 2;
-        gTextPos.bottomTxtPos.xStart = gElCanvas.width / 2;
+        gTextPos.topTxtPos.xStart = (gElCanvas.width / 2) - (topTxtWidth / 2)
+        gTextPos.bottomTxtPos.xStart = (gElCanvas.width / 2) - (bottomTxtWidth / 2)
+        
     }
     renderMeme(gCurrMeme);
+}
+
+function onFontFamilyChange(elSelect){
+    gMemeOptions.font = elSelect.value; 
+    renderMeme(gCurrMeme)
+}
+
+function onDownloadMeme(elLink){
+    const data = gElCanvas.toDataURL(); 
+    elLink.download = 'my-meme.jpg';
+    elLink.href = data;   
+}
+
+function onShareMeme(){
+    uploadImg(); 
 }
 
 // function checkClickPos(ev) {

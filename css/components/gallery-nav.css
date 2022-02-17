@@ -17,7 +17,6 @@
 }
 
 .nav-buttons{
-    width: 20%;
     display: flex;
     justify-content: space-between;
 }
@@ -38,4 +37,8 @@
     cursor: pointer;
     background-color: white;
     color: lightseagreen;
+}
+
+.menu-btn{
+    display:none;
 }

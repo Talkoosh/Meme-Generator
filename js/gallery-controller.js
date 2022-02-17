@@ -21,3 +21,11 @@ function onSetFilter(elSearch){
     gFilterBy = elSearch.value;
     renderGallery();
 }
+
+function onMenuBtnClick(){
+    document.querySelector('body').classList.add('menu-open');
+}
+
+function onCloseMenu(){
+    document.querySelector('body').classList.remove('menu-open');
+}

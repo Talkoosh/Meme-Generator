@@ -17,7 +17,7 @@ section.meme-options{
 }
 
 .meme-text{
-    width: 70%;
+    width: 100%;
     height: 50px;
     padding:20px;
     background-color: var(--clr2);
@@ -31,16 +31,17 @@ section.meme-options{
 
 div.meme-control-btns{
     background-color: lightslategray;
-    width: 50%;
+    width: 100%;
     height: 100px;
     display:flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 div.meme-control-btns button{
-    width: 50px;
-    height: 50px;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 5px;
     font-size: 1.25rem;
     font-weight: bold;
@@ -62,25 +63,64 @@ div.meme-control-btns button:hover{
     background-color: red;
 }
 
-.text-control-btns{
+.text-control{
     display:flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
-    gap: 10px;
+    padding: 10px;
+    gap: 20px;
+    background-color: lightyellow;
+    border-radius: 10px;
 }
 
-.text-control-btns button{
-    flex-basis: 33%;
+.text-control button{
     height: 2.5rem;
     font-family: poppins;
     font-weight: bold;
     font-size: large;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: -3px 4px 3px black;
 }
+
+.text-color-options{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-color-options label{
+    font-family: poppins;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.text-color-options input{
+    border-radius: 5px;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.font-alignment-control{
+    display: flex;
+    width: 50%;
+    gap: 5px;
+}
+
+.font-alignment-control > *{
+    flex-basis: 33%;
+}
+
+.font-family-select{
+    font-family: poppins;
+    width: 50%;
+    padding-left: 5px;
+    border-radius: 10px;
+    background-color: gainsboro;
+    font-size: 1.25rem;
+}
+
 
 .canvas-options-btns button{
     width: 200px;
@@ -90,4 +130,25 @@ div.meme-control-btns button:hover{
     font-size: large;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.canvas-options-btns{
+    display: flex;
+    gap: 10px;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+
+.canvas-options-btns a {
+    font-family: poppins;
+    color: black;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: -3px 4px 3px black;
+
 }

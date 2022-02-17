@@ -4,11 +4,14 @@
 
 html{
     height: 100%;
+    overflow-x: none;
 }
+
 body{
     min-height: 100%;
     background: linear-gradient(to bottom right, #F64F8B, #F88558) fixed;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 img{

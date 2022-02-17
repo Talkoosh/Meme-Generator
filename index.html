@@ -10,12 +10,15 @@
 </head>
 
 <body onload="onGalleryInit()">
+    <div onclick="onCloseMenu()" class="menu-screen"></div>
+
     <nav class="gallery-nav">
         <h3 class="logo">Meme Generator</h3>
         <div class="nav-buttons">
             <button onclick="onGalleryInit()" class="gallery-btn">Gallery</button>
             <button class="about-btn">About</button>
         </div>
+        <button onclick="onMenuBtnClick()" class="menu-btn">☰</button>
     </nav>
 
     <main class="meme-gallery">
@@ -41,16 +44,28 @@
                     <button onclick="onAddLine()" class="add-line-btn">+</button>
                     <button onclick="onRemoveLine()" class="delete-line-btn">-</button>
                 </div>
-                <div class="text-control-btns">
-                    <label for="font-color-input">Font Color:</label>
-                    <input oninput="onSetTextColor(this)" type="color" id="font-color-input" class="font-color-input">
-                    <button onclick="onSetFontSize('inc')" class="increase-font-btn">A+</button>
-                    <button onclick="onSetFontSize('dec')" class="decrease-font-btn">A-</button>
-                    <button onclick="onSetTextAlignment('right')" class="right-align-text-btn">R</button>
-                    <button onclick="onSetTextAlignment('left')" class="left-align-text-btn">L</button>
-                    <button onclick="onSetTextAlignment('center')" class="center-align-text-btn">C</button>
-                    <label for="stroke-color-input">Stroke Color:</label>
-                    <input oninput="onSetStrokeColor(this)" type="color" id="stroke-color-input" class="stroke-color-input">
+                <div class="text-control">
+                    <div class="text-color-options">
+                        <div>
+                            <label for="font-color-input">Font Color:</label>
+                            <input oninput="onSetTextColor(this)" type="color" id="font-color-input"
+                                class="font-color-input">
+                        </div>
+                        <div>
+                        <label for="stroke-color-input">Stroke Color:</label>
+                        <input oninput="onSetStrokeColor(this)" type="color" id="stroke-color-input"
+                            class="stroke-color-input">
+                        </div>
+                    </div>
+                    <div class="font-size-control">
+                        <button onclick="onSetFontSize('inc')" class="increase-font-btn">A+</button>
+                        <button onclick="onSetFontSize('dec')" class="decrease-font-btn">A-</button>
+                    </div>
+                    <div class="font-alignment-control">
+                        <button onclick="onSetTextAlignment('left')" class="left-align-text-btn">L</button>
+                        <button onclick="onSetTextAlignment('center')" class="center-align-text-btn">C</button>
+                        <button onclick="onSetTextAlignment('right')" class="right-align-text-btn">R</button>
+                    </div>
                     <select onchange="onFontFamilyChange(this)" class="font-family-select">
                         <option value="impact">Impact</option>
                         <option value="sans">Sans</option>
@@ -62,7 +77,7 @@
                     <a class="share-link" onclick="onShareMeme()">Share</a>
                     <p class="user-msg"></p>
                     <div class="share-container"></div>
-                    <a class="download-link" href="" onclick="onDownloadMeme(this)">Download</a>
+                    <a class="download-link"  onclick="onDownloadMeme(this)">Download</a>
                 </div>
             </section>
         </section>

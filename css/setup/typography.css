@@ -1,0 +1,9 @@
+@font-face{
+    font-family: balsamiq;
+    src: url(/fonts/BalsamiqSans/BalsamiqSans-Bold.ttf)
+}
+
+@font-face{
+    font-family: poppins;
+    src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}

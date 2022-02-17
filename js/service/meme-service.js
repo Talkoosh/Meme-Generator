@@ -3,7 +3,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'politics'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -12,7 +12,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['cute', 'animal'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -21,7 +21,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['cute', 'animal'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -30,7 +30,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['tired', 'animal'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -39,7 +39,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['success', 'baby'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -48,7 +48,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'man'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -57,7 +57,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'baby'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -66,7 +66,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'man'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -75,7 +75,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'baby'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -84,7 +84,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'politics'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -93,7 +93,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'sports'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -102,7 +102,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'man'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -111,7 +111,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'actors'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -120,7 +120,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['matrix', 'actors'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -129,7 +129,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'actors'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -138,7 +138,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'actors'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -147,7 +147,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'politics'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -156,7 +156,7 @@ var gMemes = [
     {
         url: `./images/${gId}.jpg`,
         id: gId++,
-        keywords: ['funny, politics'],
+        keywords: ['funny', 'toys'],
         txt: {
             topLineTxt: '',
             bottomLineTxt: ''
@@ -166,6 +166,10 @@ var gMemes = [
 
 function getMemes() {
     return gMemes.slice();
+}
+
+function getFilteredMemes(filterBy){
+    return gMemes.filter(meme => meme.keywords.includes(filterBy));
 }
 
 function getMemeById(id) {

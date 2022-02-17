@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body onload="onGalleryInit()">
@@ -21,7 +21,7 @@
     <main class="meme-gallery">
         <section class="gallery">
             <div class="filter-memes">
-                <input type="text" placeholder="search" class="meme-search">
+                <input oninput="onSetFilter(this)" type="text" placeholder="search" class="meme-search">
                 <div class="filter-words"></div>
                 <button class="more-btn">More</button>
             </div>
@@ -42,13 +42,15 @@
                     <button onclick="onRemoveLine()" class="delete-line-btn">-</button>
                 </div>
                 <div class="text-control-btns">
-                    <input oninput="onSetTextColor(this)" type="color" class="color-input">
+                    <label for="font-color-input">Font Color:</label>
+                    <input oninput="onSetTextColor(this)" type="color" id="font-color-input" class="font-color-input">
                     <button onclick="onSetFontSize('inc')" class="increase-font-btn">A+</button>
                     <button onclick="onSetFontSize('dec')" class="decrease-font-btn">A-</button>
                     <button onclick="onSetTextAlignment('right')" class="right-align-text-btn">R</button>
                     <button onclick="onSetTextAlignment('left')" class="left-align-text-btn">L</button>
                     <button onclick="onSetTextAlignment('center')" class="center-align-text-btn">C</button>
-                    <button class="">S</button>
+                    <label for="stroke-color-input">Stroke Color:</label>
+                    <input oninput="onSetStrokeColor(this)" type="color" id="stroke-color-input" class="stroke-color-input">
                     <select onchange="onFontFamilyChange(this)" class="font-family-select">
                         <option value="impact">Impact</option>
                         <option value="sans">Sans</option>
@@ -57,7 +59,7 @@
                 </div>
                 <div class="stickers"></div>
                 <div class="canvas-options-btns">
-                    <a class="share-link"  onclick="onShareMeme()">Share</a>
+                    <a class="share-link" onclick="onShareMeme()">Share</a>
                     <p class="user-msg"></p>
                     <div class="share-container"></div>
                     <a class="download-link" href="" onclick="onDownloadMeme(this)">Download</a>

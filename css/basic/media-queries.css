@@ -34,7 +34,7 @@
         justify-content: flex-start;
         position: absolute;
         top: 0;
-        left: 90%;
+        right: 0;
         background-color: yellow;
         box-shadow: none;
         transform: translateX(120%);
@@ -68,5 +68,24 @@
         height: 60%;
         width: 60px;
         border-radius: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery-nav{
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .gallery{
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .meme-search{
+        max-width: 100%;
     }
 }

@@ -1,34 +1,32 @@
+@media (min-width: 1375px) {}
 
-@media (min-width: 1375px){
-    
-}
-
-@media (max-width: 1375px){
-    .filter-memes{
+@media (max-width: 1375px) {
+    .filter-memes {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
 }
 
-@media (max-width: 1250px){
-    .meme-creator{
+@media (max-width: 1250px) {
+    .meme-creator {
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
     }
 
-    .meme-options{
+    .meme-options {
         width: 100%;
+        gap: 10px;
     }
 }
 
 @media (max-width: 1170px) {
-    .gallery-nav{
+    .gallery-nav {
         width: 100%;
     }
 
-    .nav-buttons{
+    .nav-buttons {
         height: 100%;
         flex-direction: column;
         justify-content: flex-start;
@@ -41,11 +39,11 @@
         transition: transform 0.3s
     }
 
-    body.menu-open .nav-buttons{
+    body.menu-open .nav-buttons {
         transform: translateX(0);
     }
 
-    .nav-buttons button{
+    .nav-buttons button {
         font-family: poppins;
         font-size: 1.25rem;
         height: 9.375rem;
@@ -56,14 +54,14 @@
         border-radius: 0;
         transition: backgrond-color 1s;
     }
-    
-    .nav-buttons button:hover{
+
+    .nav-buttons button:hover {
         cursor: pointer;
         background-color: grey;
         color: black;
     }
 
-    .menu-btn{
+    .menu-btn {
         display: block;
         height: 60%;
         width: 60px;
@@ -72,20 +70,31 @@
 }
 
 @media (max-width: 1000px) {
-    .gallery-nav{
+    .gallery-nav {
         padding: 20px;
     }
 }
 
-
-@media (max-width: 700px) {
-    .gallery{
+@media (max-width: 850px) {
+    .gallery {
+        width: 100%;
+    }
+}
+@media (max-width: 820px){
+    .canvas-container{
         width: 100%;
     }
 }
 
 @media (max-width: 560px) {
-    .meme-search{
+    .meme-search {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .meme-pics{
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+
     }
 }

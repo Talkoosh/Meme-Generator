@@ -35,8 +35,14 @@ function onMemeInit(memeId) {
     gElCanvas = document.getElementById('meme-canvas')
     gCtx = gElCanvas.getContext('2d');
     gCurrMeme = getMemeById(memeId);
+    resizeCanvas();
     addMouseListeners();
+
     renderMeme(gCurrMeme);
+
+    window.addEventListener('resize', () =>{
+        resizeCanvas();
+    })
 }
 
 function addMouseListeners() {
@@ -207,3 +213,10 @@ function checkClickPos(ev) {
 
     return null;
 }
+
+function resizeCanvas() {
+    var elContainer = document.querySelector('.canvas-container')
+    gElCanvas.width = elContainer.offsetWidth;
+    gElCanvas.height = gElCanvas.width;
+    renderMeme(gCurrMeme);
+   }

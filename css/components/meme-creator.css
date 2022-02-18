@@ -9,6 +9,10 @@
     padding: 15px;
 }
 
+.canvas-container{
+    width: 580px;
+}
+
 section.meme-options{
     display:flex;
     flex-direction: column;

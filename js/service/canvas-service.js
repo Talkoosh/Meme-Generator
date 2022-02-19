@@ -37,22 +37,22 @@ function setCanvas() {
     gCtx = gElCanvas.getContext('2d');
 }
 
-function addMouseListeners() {
-    gElCanvas.addEventListener('mousedown', (ev) => {
-        gIsDrag = true;
-        if (checkClickPos(ev) === 'top') {
-            gClickDiff.x = ev.offsetX - gTextPos.topTxtPos.xStart;
-            gClickDiff.y = gTextPos.topTxtPos.yStart - ev.offsetY;
-            gMemeOptions.isTopLine = true;
+function onDown(ev) {
+    console.dir(ev)
 
-        } else if (checkClickPos(ev) === 'bottom') {
-            gClickDiff.x = ev.offsetX - gTextPos.bottomTxtPos.xStart;
-            gClickDiff.y = gTextPos.bottomTxtPos.yStart - ev.offsetY
-            gMemeOptions.isTopLine = false;
-        }
-    });
-    gElCanvas.addEventListener('mouseup', () => gIsDrag = false);
-    gElCanvas.addEventListener('mousemove', setNewTxtPos);
+    const gTouchEvs = ['touchstart', 'touchmove', 'touchend'];
+    gIsDrag = true;
+    if (checkClickPos(ev) === 'top') {
+        gClickDiff.x = ev.offsetX - gTextPos.topTxtPos.xStart;
+        gClickDiff.y = gTextPos.topTxtPos.yStart - ev.offsetY;
+        gMemeOptions.isTopLine = true;
+
+    } else if (checkClickPos(ev) === 'bottom') {
+        gClickDiff.x = ev.offsetX - gTextPos.bottomTxtPos.xStart;
+        gClickDiff.y = gTextPos.bottomTxtPos.yStart - ev.offsetY
+        gMemeOptions.isTopLine = false;
+    } else gIsDrag = false;
+
 }
 
 function setNewTxtPos(ev) {

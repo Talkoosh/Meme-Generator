@@ -8,11 +8,20 @@ function onMemeInit(memeId) {
 
     gCurrMeme = getMemeById(memeId);
     resizeCanvas();
-    addMouseListeners();
+    addListeners();
 
     renderMeme(gCurrMeme);
 
     window.addEventListener('resize', () => resizeCanvas());
+}
+
+function addListeners() {
+    gElCanvas.addEventListener('mousedown', onDown);
+    gElCanvas.addEventListener('touchstart', onDown);
+    gElCanvas.addEventListener('mouseup', () => gIsDrag = false);
+    gElCanvas.addEventListener('touchend', () => gIsDrag = false)
+    gElCanvas.addEventListener('mousemove', setNewTxtPos);
+    gElCanvas.addEventListener('touchmove', setNewTxtPos);
 }
 
 function onSetMemeText(elInput) {
@@ -63,12 +72,6 @@ function onAddSticker(elSticker){
     const isTopLine = getMemeOptions().isTopLine; 
     addSticker(elSticker.innerText, gCurrMeme, isTopLine);
     renderMeme(gCurrMeme)
-}
-
-function onDownloadMeme(elLink) {
-    const data = gElCanvas.toDataURL();
-    elLink.download = 'my-meme.jpg';
-    elLink.href = data;
 }
 
 function onShareMeme() {

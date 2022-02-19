@@ -81,6 +81,9 @@
     }
 }
 @media (max-width: 820px){
+    .meme-creator{
+        width: 100%;
+    }
     .canvas-container{
         width: 100%;
     }

@@ -59,6 +59,12 @@ function onFontFamilyChange(elSelect) {
     renderMeme(gCurrMeme)
 }
 
+function onAddSticker(elSticker){
+    const isTopLine = getMemeOptions().isTopLine; 
+    addSticker(elSticker.innerText, gCurrMeme, isTopLine);
+    renderMeme(gCurrMeme)
+}
+
 function onDownloadMeme(elLink) {
     const data = gElCanvas.toDataURL();
     elLink.download = 'my-meme.jpg';

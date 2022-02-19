@@ -181,8 +181,25 @@ function setMemeText(userText, currMeme, isTopLine) {
     else currMeme.txt.bottomLineTxt= userText;
 }
 
+function addSticker(sticker, currMeme, isTopLine){
+    if(isTopLine) currMeme.txt.topLineTxt += sticker; 
+    else currMeme.txt.bottomLineTxt += sticker; 
+
+}
+
 function removeLine(line, memeObj){
     const meme = gMemes.find(meme => memeObj.id === meme.id);
     if(line === 'top') meme.txt.topLineTxt = ''; 
     else meme.txt.bottomLineTxt = '';
+}
+
+function getKeywords(){
+    const keywords = []; 
+
+    gMemes.forEach((meme) => {
+        meme.keywords.forEach((memeKey) => {
+            if(!keywords.includes(memeKey)) keywords.push(memeKey);
+        })
+    })
+    return keywords; 
 }

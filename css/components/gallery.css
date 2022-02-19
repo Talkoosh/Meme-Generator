@@ -16,6 +16,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 50px 0;
 }
 
@@ -28,6 +29,30 @@ input.meme-search{
     width: 500px;
     height: 50px;
     border-radius: 100rem;
+}
+
+.filter-words{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-words button{
+    cursor: pointer;
+    flex-basis: 15%;
+    background-color: transparent;
+    border: 0px solid transparent;
+    height: fit-content;
+    font-family: poppins;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: orange;
+}
+
+.filter-words button:hover{
+    color: red;
 }
 
 button.more-btn{

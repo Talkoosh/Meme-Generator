@@ -63,8 +63,9 @@ function onSetTextAlignment(alignTo) {
     renderMeme(gCurrMeme);
 }
 
-function onFontFamilyChange(elSelect) {
-    setFontFamily(elSelect.value);
+function onFontFamilyChange() {
+    const font = document.querySelector('.font-family-select').value;
+    setFontFamily(font);
     renderMeme(gCurrMeme)
 }
 

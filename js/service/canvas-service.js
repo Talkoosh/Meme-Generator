@@ -72,7 +72,7 @@ function renderMeme(meme) {
     var img = new Image();
     img.src = meme.url;
     img.onload = () => {
-        gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
+        gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
         drawText(meme.txt);
     }
 }
@@ -110,12 +110,12 @@ function setFontSize(str) {
 
 function addLine() {
     gMemeOptions.isTopLine = false;
-
 }
 
 function switchLine() {
     gMemeOptions.isTopLine = !gMemeOptions.isTopLine;
 }
+
 
 function setTextAlignment(alignTo) {
     gMemeOptions.alignment = alignTo;

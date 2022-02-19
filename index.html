@@ -24,9 +24,23 @@
     <main class="meme-gallery">
         <section class="gallery">
             <div class="filter-memes">
-                <input oninput="onSetFilter(this)" type="text" placeholder="search" class="meme-search">
+                <input oninput="onSetFilter(this)" list="keywords" placeholder="search" class="meme-search">
+                <datalist id="keywords">
+                        <option value="funny">
+                        <option value="politics">
+                        <option value="cute">
+                        <option value="animal">
+                        <option value="tired">
+                        <option value="success">
+                        <option value="baby">
+                        <option value="man">
+                        <option value="sports">
+                        <option value="actors">
+                        <option value="matrix">
+                        <option value="toys">
+                </datalist>
                 <div class="filter-words"></div>
-                <button class="more-btn">More</button>
+                <button onclick="onMoreClick()" class="more-btn">More</button>
             </div>
             <div class="meme-pics"></div>
         </section>

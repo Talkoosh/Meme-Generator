@@ -17,15 +17,13 @@ function onMemeInit(memeId) {
 
 function addListeners() {
     gElCanvas.addEventListener('mousedown', onDown);
-    gElCanvas.addEventListener('touchstart', onDown);
     gElCanvas.addEventListener('mouseup', () => gIsDrag = false);
-    gElCanvas.addEventListener('touchend', () => gIsDrag = false)
     gElCanvas.addEventListener('mousemove', setNewTxtPos);
-    gElCanvas.addEventListener('touchmove', setNewTxtPos);
 }
 
+
 function onSetMemeText(elInput) {
-    setMemeText(elInput.value, gCurrMeme, gMemeOptions.isTopLine);
+    setMemeText(elInput.value, gCurrMeme, getMemeOptions().isTopLine);
     renderMeme(gCurrMeme);
 }
 
@@ -46,10 +44,12 @@ function onSetFontSize(str) {
 
 function onSwitchLine() {
     switchLine();
+    renderMeme(gCurrMeme);
 }
 
 function onAddLine() {
     addLine();
+    renderMeme(gCurrMeme);
 }
 
 function onRemoveLine() {

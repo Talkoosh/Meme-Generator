@@ -41,7 +41,18 @@ function renderKeywords(){
     const elKeywords = document.querySelector('.filter-words'); 
     let strHTML = '';
 
-    keywords.forEach(keyword => strHTML += `<button onclick="keywordClicked('${keyword}', this)">${keyword}</button>`);
+    for(var i = 0; i < 4; i++){
+        strHTML += `<button onclick="keywordClicked('${keywords[i]}', this)">${keywords[i]}</button>`
+    }
+    elKeywords.innerHTML = strHTML;
+}
 
+function onMoreClick(){
+    const keywords = getKeywords();
+    const elKeywords = document.querySelector('.filter-words'); 
+    let strHTML = '';
+
+    keywords.forEach(keyword => strHTML += `<button onclick="keywordClicked('${keyword}', this)">${keyword}</button>`);
+    
     elKeywords.innerHTML = strHTML;
 }

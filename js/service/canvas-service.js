@@ -37,10 +37,11 @@ function setCanvas() {
     gCtx = gElCanvas.getContext('2d');
 }
 
-function onDown(ev) {
-    console.dir(ev)
+function clearHighlight(){
+    renderMeme(gCurrMeme, true);
+}
 
-    const gTouchEvs = ['touchstart', 'touchmove', 'touchend'];
+function onDown(ev) {
     gIsDrag = true;
     if (checkClickPos(ev) === 'top') {
         gClickDiff.x = ev.offsetX - gTextPos.topTxtPos.xStart;
@@ -53,10 +54,12 @@ function onDown(ev) {
         gMemeOptions.isTopLine = false;
     } else gIsDrag = false;
 
+    renderMeme(gCurrMeme);
 }
 
 function setNewTxtPos(ev) {
     if (!gIsDrag) return;
+
     if (gMemeOptions.isTopLine) {
         gTextPos.topTxtPos.xStart = ev.offsetX - gClickDiff.x;
         gTextPos.topTxtPos.yStart = ev.offsetY + gClickDiff.y;
@@ -65,15 +68,18 @@ function setNewTxtPos(ev) {
         gTextPos.bottomTxtPos.xStart = ev.offsetX - gClickDiff.x;
         gTextPos.bottomTxtPos.yStart = ev.offsetY + gClickDiff.y;
     }
+
     renderMeme(gCurrMeme);
 }
 
-function renderMeme(meme) {
+function renderMeme(meme, isDownload = false) {
     var img = new Image();
     img.src = meme.url;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
         drawText(meme.txt);
+        if(!isDownload) highlightText();
+        else downloadMeme();
     }
 }
 
@@ -87,6 +93,20 @@ function drawText(txt) {
 
     gCtx.strokeText(txt.topLineTxt, gTextPos.topTxtPos.xStart, gTextPos.topTxtPos.yStart);
     gCtx.strokeText(txt.bottomLineTxt, gTextPos.bottomTxtPos.xStart, gTextPos.bottomTxtPos.yStart);
+}
+
+function highlightText() {
+    gCtx.lineWidth = 2;
+    gCtx.strokeStyle = 'black';
+    if (gMemeOptions.isTopLine) {
+        if(!gCurrMeme.txt.topLineTxt) return
+        const txtWidth = gCtx.measureText(gCurrMeme.txt.topLineTxt).width; 
+        gCtx.strokeRect(gTextPos.topTxtPos.xStart, gTextPos.topTxtPos.yEnd, txtWidth, gTextPos.topTxtPos.yStart - gTextPos.topTxtPos.yEnd + 20);
+    } else {
+        if(!gCurrMeme.txt.bottomLineTxt) return
+        const txtWidth = gCtx.measureText(gCurrMeme.txt.bottomLineTxt).width; 
+        gCtx.strokeRect(gTextPos.bottomTxtPos.xStart, gTextPos.bottomTxtPos.yEnd, txtWidth, gTextPos.bottomTxtPos.yStart - gTextPos.bottomTxtPos.yEnd + 20);
+    }
 }
 
 function setTextOptions() {
@@ -159,6 +179,7 @@ function getTxtEndPos(area, txt) {
     }
 }
 
+
 function checkClickPos(ev) {
     if (ev.offsetX >= gTextPos.topTxtPos.xStart &&
         ev.offsetX <= gTextPos.topTxtPos.xEnd) {
@@ -180,7 +201,6 @@ function checkClickPos(ev) {
 }
 
 function setCanvasSize(width) {
-    console.log(width)
     gElCanvas.width = width;
     gElCanvas.height = width;
     setBottomTxtPos();

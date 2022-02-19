@@ -32,7 +32,12 @@ function doUploadImg(imgDataUrl, onSuccess) {
 }
 
 function onDownloadMeme(elLink) {
+    clearHighlight()
+}
+
+function downloadMeme(){
     const data = gElCanvas.toDataURL();
+    const elLink = document.querySelector('.download-link');
     elLink.download = 'my-meme.jpg';
     elLink.href = data;
 }

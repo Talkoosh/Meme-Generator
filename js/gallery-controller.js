@@ -23,7 +23,7 @@ function onSetFilter(elSearch){
     renderGallery();
 }
 
-function keywordClicked(keyword, elBtn){
+function keywordClicked(keyword){
     gFilterBy = keyword; 
     renderGallery();
 }

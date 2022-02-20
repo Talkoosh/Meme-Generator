@@ -20,7 +20,7 @@ var gTextPos = {
     bottomTxtPos: {
         xStart: 10,
         yStart: 550
-    }
+    },
 };
 
 var gClickDiff = {
@@ -174,7 +174,7 @@ function getTxtEndPos(area, txt) {
     switch (area) {
         case 'top':
             gTextPos.topTxtPos['xEnd'] = gTextPos.topTxtPos.xStart + txtWidth;
-            gTextPos.topTxtPos['yEnd'] = gTextPos.topTxtPos.yStart - fontHeight
+            gTextPos.topTxtPos['yEnd'] = gTextPos.topTxtPos.yStart - fontHeight;
             break;
         case 'bottom':
             gTextPos.bottomTxtPos['xEnd'] = gTextPos.bottomTxtPos.xStart + txtWidth;

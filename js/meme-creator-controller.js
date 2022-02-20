@@ -23,7 +23,6 @@ function addListeners() {
     gElCanvas.addEventListener('touchstart', onDown);
     gElCanvas.addEventListener('touchend', () => gIsDrag = false);
     gElCanvas.addEventListener('touchmove', setNewTxtPos);
-
 }
 
 

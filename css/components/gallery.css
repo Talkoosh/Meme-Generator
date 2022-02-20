@@ -48,11 +48,11 @@ input.meme-search{
     font-family: poppins;
     font-size: 1.25rem;
     font-weight: bold;
-    color: orange;
+    color: var(--clr3);
 }
 
 .filter-words button:hover{
-    color: red;
+    color: orange;
 }
 
 button.more-btn{

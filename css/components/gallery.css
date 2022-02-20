@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--clr1);
+    background-color: var(--clr2);
     border-radius: 30px;
     padding: 15px;
 }
@@ -23,9 +23,9 @@
 input.meme-search{
     font-family: poppins;
     font-size: 1.25rem;
-    color: white;
+    color: black;
     padding-left: 1.5625rem;
-    background-color: var(--clr2);
+    background-color: var(--clr4);
     width: 500px;
     height: 50px;
     border-radius: 100rem;

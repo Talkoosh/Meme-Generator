@@ -33,7 +33,7 @@ function getMemeOptions() {
 }
 
 function setCanvas() {
-    gElCanvas = document.getElementById('meme-canvas')
+    gElCanvas = document.getElementById('meme-canvas');
     gCtx = gElCanvas.getContext('2d');
 }
 

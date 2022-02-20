@@ -9,7 +9,7 @@ html{
 
 body{
     min-height: 100%;
-    background-color: rgb(94, 91, 91);
+    background-color: var(--clr1);
     background-repeat: no-repeat;
     position: relative;
     overflow-x: hidden;

@@ -1,7 +1,7 @@
 .gallery-nav {
     width: 80%;
     height: 100px;
-    background: linear-gradient(to right, aqua, lightseagreen);
+    background-color: var(--clr2);
     margin: auto;
     border-radius: 100rem;
     display: flex;
@@ -11,10 +11,9 @@
 }
 
 .logo {
-    font-family: balsamiq;
-    font-size: 1.5625rem;
-    
-    color:gold;    
+    width: fit-content;
+    height: 40px;
+    cursor:default;
 }
 
 .nav-buttons{

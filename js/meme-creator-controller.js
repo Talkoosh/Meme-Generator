@@ -19,6 +19,11 @@ function addListeners() {
     gElCanvas.addEventListener('mousedown', onDown);
     gElCanvas.addEventListener('mouseup', () => gIsDrag = false);
     gElCanvas.addEventListener('mousemove', setNewTxtPos);
+
+    gElCanvas.addEventListener('touchstart', onDown);
+    gElCanvas.addEventListener('touchend', () => gIsDrag = false);
+    gElCanvas.addEventListener('touchmove', setNewTxtPos);
+
 }
 
 
